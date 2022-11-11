@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+}
+
+.control-buttons {
+  transition: 0.5s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(189, 147, 249, 0.9);
+}
+.control-buttons.remove {
+  opacity: 0;
+}
+.control-buttons input {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: transparent;
+}
+.control-buttons input:focus {
+  outline: none;
+}
+.control-buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  padding: 15px 25px;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #2cbc63;
+}
+
+.info-container {
+  width: 1080px;
+  margin: 20px auto 0;
+  background-color: #f6f6f6;
+  padding: 20px;
+  font-size: 24px;
+  overflow: hidden;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.memory-game-blocks {
+  display: flex;
+  width: 1100px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+.memory-game-blocks.no-clicking {
+  pointer-events: none;
+}
+.memory-game-blocks .flib {
+  transform: rotateY(180deg);
+}
+.memory-game-blocks .match {
+  transform: rotateY(180deg);
+}
+.memory-game-blocks .game-block {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 200px;
+  width: 200px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  flex: 1 0 200px;
+  margin: 0 10px 20px;
+}
+.memory-game-blocks .game-block .fornt {
+  background-color: #333;
+  line-height: 200px;
+}
+.memory-game-blocks .game-block .fornt::before {
+  content: "!";
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+}
+.memory-game-blocks .game-block .back {
+  background-color: #f6f6f6;
+  transform: rotateY(180deg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memory-game-blocks .game-block .back img {
+  width: 200px;
+  height: 200px;
+}
+.memory-game-blocks .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 5px solid darkgrey;
+}/*# sourceMappingURL=style.css.map */
